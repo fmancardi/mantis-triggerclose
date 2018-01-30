@@ -47,12 +47,12 @@ class TriggerClosePlugin extends MantisPlugin {
 		$this->description = 'Automatically closes issues based on terms such as "feedback has been the last status for two months and no changes has been made"';
 		$this->version = 0.1;
 		$this->requires = array(
-			'MantisCore' => '1.2.0'
+			'MantisCore' => '2.0.0'
 		);
 		$this->page = 'config';
 
-		$this->author = 'Carl Helmertz';
-		$this->contact = 'helmertz@gmail.com';
-		$this->url = 'https://github.com/chelmertz/mantis-triggerclose';
+		$this->author = 'Francisco Mancardi';
+		$this->contact = 'francisco.mancardi@gmail.com';
+		$this->url = 'https://github.com/fmancardi/mantis-triggerclose';
 	}
 }

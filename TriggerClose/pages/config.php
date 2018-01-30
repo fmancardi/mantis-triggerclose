@@ -3,7 +3,8 @@
 auth_reauthenticate();
 access_ensure_global_level(config_get('manage_plugin_threshold'));
 
-html_page_top('TriggerClose');
+layout_page_header(plugin_lang_get('TriggerClose'));
+layout_page_begin();
 
 print_manage_menu();
 
@@ -157,4 +158,4 @@ if(isset($_SESSION['TriggerClose_flash_message'])) {
 into a crontab (for example, by typing <pre>crontab -e</pre> as a user which can execute that file.</p>
 
 <?php
-html_page_bottom();
+layout_page_end();
