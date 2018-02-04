@@ -43,13 +43,12 @@ class TriggerCloseApi {
 	 * @return array [int id] => string label
 	 */
 	function available_statuses() {
-		return array(
-			FEEDBACK => 'feedback',
-			ACKNOWLEDGED => 'acknowledged',
-			CONFIRMED => 'confirmed',
-			ASSIGNED => 'assigned',
-			RESOLVED => 'resolved'
-		);
+        $xx = explode(',',lang_get('status_enum_string'));
+		foreach( $xx as $elem ) {
+			$fx = explode(':',$elem);
+			$fy[$fx[0]]=$fx[1];
+		}
+		return $fy;
 	}
 
 	/**

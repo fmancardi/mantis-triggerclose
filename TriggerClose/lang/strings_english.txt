@@ -1,0 +1,32 @@
+<?php
+
+# Custom strings for english language
+$s_plugin_TriggerClose_config_title = 'Trigger Close - Configuration';
+$s_plugin_TriggerClose_title = 'Trigger Close';
+$s_plugin_TriggerClose_check_on_page_loads = 'Trigger check on page loads';
+$s_plugin_TriggerClose_enable_cron = 'Otherwise, enable <a href="#cron">cron</a>';
+$s_plugin_TriggerClose_timeout_to_close = "Close a ticket that has not been modified after (value in seconds)";
+
+$s_plugin_TriggerClose_zero_means = "0 means it's disabled";
+$s_plugin_TriggerClose_note_when_closing = 'Note added when automatically closed an issue';
+
+$s_plugin_TriggerClose_note_text_when_closing = 
+"Issue has been closed automatically, by Trigger Close Plugin.\nFeel free to re-open with additional information if you think the issue is not resolved.";
+
+$s_plugin_TriggerClose_categories_to_check = 'Categories to check';
+
+$s_plugin_TriggerClose_privileges = "Close issues assigned to a member included in the following groups";
+
+$s_plugin_TriggerClose_qty_of_users = 'users in selected groups';
+$s_plugin_TriggerClose_statuses_to_check = 'Issues with these statuses will be checked for inactivity';
+
+$s_plugin_TriggerClose_close_as_user = 'Close as this user';
+$s_plugin_TriggerClose_save = 'Save';
+
+$s_plugin_TriggerClose_using_cron = 'Using Cron';
+$s_plugin_TriggerClose_config_cron = 'To configure Cron';
+$s_plugin_TriggerClose_cron_line = "*/5 * * * * /usr/bin/env php";
+$s_plugin_TriggerClose_cron_help = "into a crontab (for example, by typing <pre>crontab -e</pre> as a user which can execute that file.</p>";
+
+
+

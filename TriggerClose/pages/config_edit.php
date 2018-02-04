@@ -21,11 +21,8 @@ foreach($api->config() as $option => $default_value) {
 	switch($option) {
 		case 'after_seconds':
 			$new_value = gpc_get_int($option, $default_value);
-			if($new_value < TriggerCloseApi::MIN_SECONDS) {
-				// disables trigger, 0 will abort in main script
-				$new_value = 0;
-			}
 			break;
+
 		case 'categories':
 			$new_value = gpc_get_int_array($option, $default_value);
 			foreach($new_value as $index => $category) {
@@ -34,6 +31,7 @@ foreach($api->config() as $option => $default_value) {
 				}
 			}
 			break;
+
 		case 'privileges':
 			$new_value = gpc_get_int_array($option, $default_value);
 			foreach($new_value as $index => $privilege) {
@@ -42,12 +40,15 @@ foreach($api->config() as $option => $default_value) {
 				}
 			}
 			break;
+
 		case 'maybe_close_active':
 			$new_value = (int)(boolean) gpc_get_int($option, $default_value);
 			break;
+
 		case 'message':
 			$new_value = gpc_get_string($option, $default_value);
 			break;
+
 		case 'statuses':
 			$new_value = gpc_get_int_array($option, $default_value);
 			foreach($new_value as $index => $status) {
@@ -56,6 +57,7 @@ foreach($api->config() as $option => $default_value) {
 				}
 			}
 			break;
+
 		case 'user':
 			$new_value = gpc_get_int($option, $default_value);
 			if(!user_exists($new_value)) {
@@ -64,13 +66,12 @@ foreach($api->config() as $option => $default_value) {
 			break;
 
 	}
-	if(plugin_config_get($option) != $new_value) {
-		plugin_config_set($option, $new_value);
-	}
+
+	plugin_config_set($option, $new_value);
 }
 
 form_security_purge('plugin_format_config_edit');
 
-$_SESSION['TriggerClose_flash_message'] = "Settings saved successfully";
+// $_SESSION['TriggerClose_flash_message'] = "Settings saved successfully";
 
-print_successful_redirect(plugin_page('config', true));
+print_successful_redirect( plugin_page('config', true) );
