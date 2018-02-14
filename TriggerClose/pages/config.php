@@ -98,7 +98,7 @@ if(isset($_SESSION['TriggerClose_flash_message'])) {
             <?php echo plugin_lang_get( 'note_when_closing' ) ?> 
        </td>
        <td>
-		<textarea name="message" cols="80" rows="10"><?php echo plugin_lang_get('note_text_when_closing') ?></textarea>
+		<textarea name="message" cols="80" rows="10"><?php echo plugin_config_get('message') ?></textarea>
        </td>
    </tr>
 
